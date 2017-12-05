@@ -111,3 +111,61 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 159ms (Views: 131.0ms | ActiveRecord: 1.0ms)
 
 
+Started GET "/posts" for 127.0.0.1 at 2017-12-05 14:57:32 -0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  Rendered posts/index.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 217ms (Views: 178.5ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-12-05 14:58:48 -0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (3.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  Rendered posts/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 167ms (Views: 133.3ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2017-12-05 14:58:57 -0800
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 170ms (Views: 142.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2017-12-05 14:59:12 -0800
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IdbxpMbKpfCDBJkY34pxstTe73V/xX8keb1hDTNWt+U37I1YN7hcUdqzmu96Y8LVJbP9YqUv4IRbHv1/kG/+Bw==", "post"=>{"title"=>"Fraskjdl;wejf", "body"=>"ksdajf;lkjwefkl;jl qwl fk;jqwl;efjk ql;wefjk lqw;efjk lwfjlfjlwefjlq;wefj lq;wefjk l;qwfjklq; kfjqwl;fjk qwl;efjk ql;wfjk ql;wefjkql;fjkqwfjkl"}, "commit"=>"Create Post"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Fraskjdl;wejf"], ["body", "ksdajf;lkjwefkl;jl qwl fk;jqwl;efjk ql;wefjk lqw;efjk lwfjlfjlwefjlq;wefj lq;wefjk l;qwfjklq; kfjqwl;fjk qwl;efjk ql;wfjk ql;wefjkql;fjkqwfjkl"], ["created_at", "2017-12-05 22:59:13.039214"], ["updated_at", "2017-12-05 22:59:13.039214"]]
+  [1m[35m (21.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts/3
+Completed 302 Found in 43ms (ActiveRecord: 24.5ms)
+
+
+Started GET "/posts/3" for 127.0.0.1 at 2017-12-05 14:59:13 -0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 187ms (Views: 154.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-12-05 14:59:17 -0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  Rendered posts/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 170ms (Views: 140.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-05 15:00:01 -0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  Rendered posts/index.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 182ms (Views: 147.7ms | ActiveRecord: 3.0ms)
+
+
